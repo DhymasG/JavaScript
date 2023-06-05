@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País onde vivo</title>
+</head>
+
+<body>
+    <h1>Estrangeiro ou Brasileiro</h1>
+    Moro atualmente na(o): <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular() {
+            var txtpa = window.document.querySelector('input#txtp')
+            var res = window.document.querySelector('div#res')
+            var pais = (txtpa.value)
+            res.innerHTML = `Seu país atual é ${pais} `
+            if (pais != 'Brasil') {
+                res.innerHTML += `Você é Estrangeiro`
+            } else {
+                res.innerHTML += `Você é Brasileiro`
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
